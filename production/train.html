@@ -81,6 +81,166 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Train Neural Filter </h2>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <br />
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+
+                      <div class="col-md-6 col-sm-6 col-xs-12 ">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Polyfox</h2>
+                            <ul class="nav navbar-right panel_toolbox">
+                              <!-- Select Style Image Modal -->
+                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Style Image </button>
+
+                              <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                  <div class="modal-content">
+
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span>
+                                      </button>
+                                      <h4 class="modal-title" id="myModalLabel">Select Style Image </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                      <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                        <div class="x_panel">
+                                          <div class="x_title">
+                                            <h2>Damp</h2>
+                                            <div class="clearfix"></div>
+                                          </div>
+                                          <div class="x_content">
+                                            <img src="images/style/watercolor-01-sqr.jpg" alt="" class="img-responsive">
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                        <div class="x_panel">
+                                          <div class="x_title">
+                                            <h2>Marilyn</h2>
+                                            <div class="clearfix"></div>
+                                          </div>
+                                          <div class="x_content">
+                                            <img src="images/style/marilyn.jpg" alt="" class="img-responsive">
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <div class="col-md-4 col-sm-4 col-xs-12 ">
+                                    <div class="x_panel">
+                                      <div class="x_title">
+                                        <h2>Radiate</h2>
+                                        <div class="clearfix"></div>
+                                      </div>
+                                      <div class="x_content">
+                                        <img src="images/style/beach-oil-01.jpg" alt="" class="img-responsive">
+                                      </div>
+                                    </div>
+                                  </div>
+                                    <div class="clearfix"></div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- /Select Style Image Modal -->
+                            </ul>
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+                            <img src="images/style/polyfox.jpg" alt="" class="img-responsive">
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Library </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <div id="gender" class="btn-group" data-toggle="buttons">
+                              <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                <input type="radio" name="gender" value="male"> &nbsp; Texture Nets &nbsp;
+                              </label>
+                              <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                                <input type="radio" name="gender" value="female"> &nbsp; Chainer &nbsp;  
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Training Data </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select class="form-control">
+                              <option>MS COCO</option>
+                              <option>ImageNet</option>
+                              <option>MS COCO + ImageNet</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Style Weight <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="1e-2">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">TV Weight <span class="required">*</span>
+                          </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="1e-1">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Learning Rate </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="1e-2">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Style Size </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="256">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Number of Iterations </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="50000">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12" for="first-name">Epochs </label>
+                          <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" id="first-name" required="required" class="form-control col-md-7 col-xs-12" placeholder="2">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-9">
+                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                      </div>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
         <!-- /page content -->
 
