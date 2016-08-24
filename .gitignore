@@ -1,3 +1,4 @@
+server/fs
 *venv
 *.DS_Store
 *.swp
