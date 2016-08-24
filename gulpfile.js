@@ -1,4 +1,6 @@
 var gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
+    babel = require('gulp-babel'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
@@ -13,10 +15,13 @@ gulp.task('scripts', function() {
         'src/js/helpers/*.js',
         'src/js/*.js',
       ])
+      .pipe(sourcemaps.init())
+      .pipe(babel({ presets: ['es2015'] }))
       .pipe(concat('custom.js'))
       .pipe(gulp.dest(DEST+'/js'))
       .pipe(rename({suffix: '.min'}))
       .pipe(uglify())
+      .pipe(sourcemaps.write('.'))
       .pipe(gulp.dest(DEST+'/js'))
       .pipe(browserSync.stream());
 });
