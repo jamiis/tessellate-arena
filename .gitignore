@@ -1,4 +1,4 @@
-server/fs
+fs
 *venv
 *.DS_Store
 *.swp

@@ -7,9 +7,12 @@ import os
 
 # TODO from stylize import stylize
 
-STYLES_DIR = './fs/styles'
-PHOTOS_DIR = './fs/photos'
+STYLES_DIR = '../fs/styles'
+PHOTOS_DIR = '../fs/photos'
 ALLOWED_PHOTO_EXTENSIONS = set(['jpg', 'jpeg', 'png'])
+
+# TODO change when switching to S3
+STYLES_BASE_URL = '/fs/styles'
 
 app = Flask(__name__, static_url_path='')
 
@@ -80,6 +83,16 @@ def handle_invalid_usage(error):
 '''
 API endpoints
 '''
+
+'''
+/api/style
+'''
+@app.route('/api/style', methods=['GET'])
+def styles():
+    style_files = os.listdir(STYLES_DIR)
+    style_urls = map(lambda f: STYLES_BASE_URL + f, style_files)
+    return jsonify({'styleUrls': style_urls})
+
 @app.route('/api/style/upload', methods=['POST'])
 def style_upload():
     try:
@@ -98,6 +111,9 @@ def style_upload():
     return 'upload success'
 
 
+'''
+/api/photo
+'''
 @app.route('/api/photo/upload', methods=['POST'])
 def photo_upload():
     try:
