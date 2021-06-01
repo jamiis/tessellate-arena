@@ -62,7 +62,7 @@ tqdm==4.8.1
 traitlets==4.2.2
 Twisted==16.0.0
 unity-lens-photos==1.0
-urllib3==1.13.1
+urllib3==1.26.5
 virtualenv==15.0.2
 wcwidth==0.1.7
 Werkzeug==0.11.10
